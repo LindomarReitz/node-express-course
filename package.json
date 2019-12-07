@@ -4,7 +4,7 @@
   "description": "## Description",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./node_modules/mocha/bin/mocha",
     "start": "node server.js"
   },
   "repository": {
@@ -20,5 +20,10 @@
   "homepage": "https://github.com/LindomarReitz/node-express-course#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "supertest": "^4.0.2"
   }
 }
