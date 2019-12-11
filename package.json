@@ -20,7 +20,8 @@
   "homepage": "https://github.com/LindomarReitz/node-express-course#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.8.0"
+    "mongoose": "^5.8.0",
+    "test": "^0.6.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
