@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/test", { useNewUrlParser: true });
+mongoose.connect("mongodb://mongodb:27017/test", { useNewUrlParser: true });
 
 const userSchema = require("./models/user.js");
 
