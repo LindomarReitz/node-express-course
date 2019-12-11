@@ -9,10 +9,10 @@ const userSchema = require("./models/user.js");
 
 const User = mongoose.model("User", userSchema);
 
-const mark = new User({ name: "Mark" });
+const mark = new User({ name: "mark" });
 mark.save();
 
-const jill = new User({ name: "Jill" });
+const jill = new User({ name: "jill" });
 jill.save();
 
 app.use(bodyParser.json());
@@ -34,12 +34,18 @@ app.get("/users", function (req, res) {
 });
 
 app.get("/users/:id", function (req, res) {
-    console.log(req.params.id);
+    User.find({ name: req.params.id }, function(err, users) {
+        var userData = [];
 
-    res.json({
-        success: true,
-        message: 'got one user',
-        user: req.params.id
+        users.forEach(function (user) {
+            userData.push(user.name);
+        });
+
+        res.json({
+            success: true,
+            message: 'got one user',
+            user: userData
+        });
     });
 });
 
