@@ -10,14 +10,7 @@ describe("GET /users", function () {
             .expect(200, {
                 success: true,
                 message: "successfully got users. Nice!",
-                users: [
-                    {
-                        name: 'Mark'
-                    },
-                    {
-                        name: 'Jill'
-                    }
-                ]
+                users: ['Mark', 'Jill']
             }, done);
     });
 
