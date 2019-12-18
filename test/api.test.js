@@ -1,4 +1,3 @@
-const assert = require('chai').assert;
 const request = require("supertest");
 
 const app = require('../server')
@@ -10,14 +9,7 @@ describe("GET /users", function () {
             .expect(200, {
                 success: true,
                 message: "successfully got users. Nice!",
-                users: [
-                    {
-                        name: 'Mark'
-                    },
-                    {
-                        name: 'Jill'
-                    }
-                ]
+                users: ["mark", "jill"]
             }, done);
     });
 
@@ -27,7 +19,7 @@ describe("GET /users", function () {
             .expect(200, {
                 success: true,
                 message: "got one user",
-                user: "mark"
+                user: ["mark"]
             }, done);
     });
 });
