@@ -11,6 +11,7 @@ services:
     depends_on:
       - mongodb
     command: tail -f /dev/null
+    tty: true
   mongodb:
     image: mongo:3.4
     ports:
